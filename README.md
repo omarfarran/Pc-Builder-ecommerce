@@ -71,9 +71,48 @@ http://localhost/PcBuilder
 ---
 
 ## 📸 Screenshots
-<img width="780" height="362" alt="image" src="https://github.com/user-attachments/assets/3d12ba0c-8478-437f-b4c3-3bc293d06e66" />
 
+### Homepage
+![Homepage](screenshots/homepage.jpeg)
 
+### Sign In
+![Sign In](screenshots/SignIn.png)
+
+### Sign Up
+![Sign Up](screenshots/SignUp.png)
+
+### Dashboard
+![Dashboard](screenshots/dashboard .png)
+
+### Dashboard 2
+![Dashboard2](screenshots/dashboard2.png)
+
+### Products
+![Products](screenshots/products.png)
+
+### Product Cart
+![Product Cart](screenshots/productCart.jpeg)
+
+### Cart
+![Cart](screenshots/cart.png)
+
+### Favorites
+![Favorites](screenshots/Favorites.png)
+
+### Orders
+![Orders](screenshots/orders .png)
+
+### Profile
+![Profile](screenshots/profile.png)
+
+### Forgot Password
+![Forgot Password](screenshots/forgotPassword.png)
+
+### Custom Page
+![Custom](screenshots/custom.png)
+
+### Admin Products
+![Admin Products](screenshots/AdminProducts.png)
 ---
 
 ## 👨‍💻 Team
