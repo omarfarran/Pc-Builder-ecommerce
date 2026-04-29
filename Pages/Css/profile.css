@@ -1,0 +1,111 @@
+body{
+
+background-color: #121212;
+
+}
+.navbar .navbar-brand{
+
+font-weight: bolder;
+
+
+}
+
+.navbar{
+
+    background-color: #1B1B1B;
+
+}
+.navbar .nav-item:hover {
+background-color: #232323;
+border:none ;
+outline: none;
+border-radius:7px;
+
+}
+
+.bg-dark{
+    background-color: #1B1B1B !important;
+
+}
+
+.border-dark{
+    border-color:#333333 !important;
+}
+p{
+    
+color:    #A1A1A1;
+ 
+}
+.profile {
+  color:white;
+}
+
+.info-card {
+  background:#1B1B1B;
+  border:1px solid #333;
+  border-radius:15px;
+  padding:25px;
+  height:100%;
+}
+
+.info-card h6 {
+  color:#bbb;
+  font-size:14px;
+  margin-bottom:6px;
+}
+
+.info-card h2 {
+  margin:0;
+  font-weight:700;
+}
+
+.info-card small {
+  color:#777;
+}
+
+
+.orders {
+  background:#1B1B1B;
+  border-radius:15px;
+  padding:25px;
+  border:1px solid #333;
+}
+
+
+.order-item {
+  background:#161616;
+  border:1px solid #333;
+  border-radius:12px;
+  padding:15px 20px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  margin-bottom:12px;
+}
+
+.order-left span{
+  display:block;
+  color:#aaa;
+  font-size:14px;
+}
+
+.order-right{
+  text-align:right;
+}
+
+.badge-status{
+  padding:4px 10px;
+  border-radius:10px;
+  font-size:12px;
+  margin-bottom:4px;
+  display:inline-block;
+}
+
+.delivered { background:#1DB954; color:black; }
+.shipped   { background:#0d6efd; color:white; }
+.processing{ background:#ffc107; color:black; }
+ badge-status.delivered { background: #1DB954; color: black; } /* أخضر سبوتيفاي */
+.badge-status.shipped   { background: #0d6efd; color: white; } /* أزرق */
+.badge-status.processing{ background: #ffc107; color: black; } /* أصفر */

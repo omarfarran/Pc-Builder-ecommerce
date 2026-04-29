@@ -1,0 +1,9 @@
+[
+  {
+    "id": 1,
+    "fullName": "Admin User",
+    "email": "admin@pcbuilder.com",
+    "password": "admin123",
+    "role": "admin"
+  }
+]

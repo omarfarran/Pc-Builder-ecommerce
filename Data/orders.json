@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1001,
+    "userId": 1,
+    "userName": "Ibrahim Ahmad",
+    "email": "ibra@mail.com",
+    "date": "2025-01-10",
+    "status": "completed",
+    "total": 467.64,
+    "items": [
+      { "productId": 2, "qty": 1 },
+      { "productId": 5, "qty": 2 }
+    ]
+  },
+  {
+    "id": 1002,
+    "userId": 2,
+    "userName": "Sara Khaled",
+    "email": "sara@mail.com",
+    "date": "2025-01-12",
+    "status": "pending",
+    "total": 899,
+    "items": [
+      { "productId": 1, "qty": 1 }
+    ]
+  }
+]

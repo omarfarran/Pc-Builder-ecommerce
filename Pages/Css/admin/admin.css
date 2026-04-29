@@ -1,0 +1,406 @@
+body {
+  background: #0f0f0f;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.admin-wrapper {
+  display: flex;
+  height: 100vh;
+}
+
+.bg-dark{
+    background-color: #1B1B1B !important;
+
+}
+
+.border-dark{
+    border-color:#333333 !important;
+}
+/* Sidebar */
+.sidebar {
+  width: 260px;
+  background: #121212;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  color: #3b82f6;
+  margin-bottom: 30px;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  flex-grow: 1;
+}
+
+.menu li {
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.menu li.active,
+.menu li:hover {
+  background: #1f1f1f;
+}
+
+.admin-footer {
+  border-top: 1px solid #333;
+  padding-top: 15px;
+}
+
+/* Main */
+.main {
+  flex-grow: 1;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+.stat-card {
+  background: #1a1a1a;
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.stat-card h6 {
+  color: #aaa;
+}
+
+.stat-card span {
+  font-size: 14px;
+}
+
+.positive {
+  color: #22c55e;
+}
+
+.info {
+  color: #3b82f6;
+}
+
+.card-dark {
+  background: #1a1a1a;
+  border-radius: 14px;
+  padding: 20px;
+}
+
+/* Orders */
+.order-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #333;
+}
+
+.status {
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+.completed {
+  background: #16a34a;
+}
+
+.pending {
+  background: #f59e0b;
+}
+
+table {
+  color: #fff;
+}
+
+.status-select {
+  background: #1f1f1f;
+  border: none;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+
+.status-select.pending { background:#f59e0b; }
+.status-select.processing { background:#3b82f6; }
+.status-select.shipped { background:#8b5cf6; }
+.status-select.delivered { background:#16a34a; }
+.status-select.cancelled { background:#dc2626; }
+
+
+
+
+.menu li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 0.2s ease;
+}
+
+/* Hover */
+.menu li a:hover {
+  background: #1f1f1f;
+}
+
+/* Active Page */
+.menu li.active a {
+  background: #ffffff;
+  color: #000000;
+  font-weight: 600;
+}
+
+/* Active icon */
+.menu li.active svg {
+  stroke: #000;
+}
+
+
+
+.view-btn {
+  background: #1f1f1f;
+  border: 1px solid #333;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.view-btn:hover {
+  background: #3b82f6;
+}
+
+
+
+.status-select {
+  appearance: none;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Status Colors */
+.status-select.pending {
+  background: #f59e0b; 
+}
+
+.status-select.processing {
+  background: #3b82f6; 
+}
+
+.status-select.shipped {
+  background: #8b5cf6; 
+}
+
+.status-select.completed {
+  background: #16a34a;
+}
+
+.status-select.cancelled {
+  background: #dc2626; 
+}
+
+.status-select option {
+  color: white;
+}
+
+
+.orders-filters {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.search-box {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background: #1a1a1a;
+  border-radius: 12px;
+  padding: 10px 14px;
+}
+
+.search-box svg {
+  color: #aaa;
+  margin-right: 10px;
+}
+
+.search-box input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  width: 100%;
+}
+
+.orders-filters select {
+  background: #1a1a1a;
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+/* ===== Modal Overlay ===== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* ===== Modal Card ===== */
+.modal-card {
+  background: #fff;
+  color: #000;
+  width: 620px;
+  max-width: 95%;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+/* Header */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-header h4 {
+  margin: 0;
+}
+
+.modal-header p {
+  margin: 4px 0 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.modal-header button {
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* Form Grid */
+.modal-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.modal-form label {
+  font-size: 13px;
+  color: #444;
+}
+
+.modal-form input,
+.modal-form textarea,
+.modal-form select {
+  width: 100%;
+  padding: 10px;
+  background: #f4f4f5;
+  border: none;
+  border-radius: 10px;
+}
+
+.modal-form textarea {
+  min-height: 90px;
+  resize: none;
+}
+
+.modal-form .full {
+  grid-column: 1 / -1;
+}
+
+/* Switches */
+.switches {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.switch {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.switch input {
+  display: none;
+}
+
+.switch span {
+  width: 40px;
+  height: 20px;
+  background: #ccc;
+  border-radius: 20px;
+  position: relative;
+}
+
+.switch span::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: .3s;
+}
+
+.switch input:checked + span {
+  background: #2563eb;
+}
+
+.switch input:checked + span::after {
+  transform: translateX(20px);
+}
+
+/* Footer */
+.modal-footer {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.btn-dark {
+  background: #0f172a;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: none;
+}
+
+.btn-light {
+  background: #f4f4f5;
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: none;
+}
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: flex; justify-content: center; align-items: center;
+    z-index: 1000;
+}
+.modal-card {
+    background: #1a1a1a; padding: 20px; border-radius: 10px;
+    width: 90%; max-width: 500px; color: white;
+}
+.d-none { display: none !important; }

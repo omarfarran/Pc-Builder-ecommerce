@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PC Builder</title>
+    <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+            crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="./Pages/Css/main.css"/>
+    <link rel="stylesheet" href="./Pages/Css/favorits.css"/>
+    <link rel="stylesheet" href="./Pages/Css/products.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark position-sticky top-0">
+    <div class="container">
+        <a class="navbar-brand" href="./index.html">
+            <svg
+                    class="mb-1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-computer-icon lucide-computer"
+            >
+                <rect width="14" height="8" x="5" y="2" rx="2" />
+                <rect width="20" height="8" x="2" y="14" rx="2" />
+                <path d="M6 18h2" />
+                <path d="M12 18h6" />
+            </svg>
+            Pc Builder</a
+        >
+        <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto gap-5">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                </li>
+                <li class="nav-item d-flex">
+                    <a class="nav-link active" href="Pages/Html/products.html">
+                        <svg
+                                class="me-2"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="lucide lucide-package-icon lucide-package"
+                        >
+                            <path
+                                    d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"
+                            />
+                            <path d="M12 22V12" />
+                            <polyline points="3.29 7 12 12 20.71 7" />
+                            <path d="m7.5 4.27 9 5.15" />
+                        </svg>
+                        Products</a
+                    >
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-disabled="true" href="Pages/Html/custom.html"
+                    ><svg
+                            class="me-2 mb-1"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="lucide lucide-computer-icon lucide-computer"
+                    >
+                        <rect width="14" height="8" x="5" y="2" rx="2" />
+                        <rect width="20" height="8" x="2" y="14" rx="2" />
+                        <path d="M6 18h2" />
+                        <path d="M12 18h6" />
+                    </svg>
+                        Custom PC</a
+                    >
+                </li>
+            </ul>
+
+            <ul class="navbar-nav ms-auto gap-4">
+                <li class="nav-item d-flex">
+                    <a class="nav-link active" aria-current="page" href="Pages/Html/favorites.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-icon lucide-heart"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/></svg>
+                        <span id="fav-counter" class="fav-counter d-none">0</span>
+                    </a>
+                </li>
+                <li class="nav-item d-flex">
+                    <a class="nav-link active" aria-current="page" href="Pages/Html/cart.html">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="lucide lucide-shopping-cart-icon lucide-shopping-cart"
+                        >
+                            <circle cx="8" cy="21" r="1" />
+                            <circle cx="19" cy="21" r="1" />
+                            <path
+                                    d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"
+                            />
+                        </svg>
+                        <span id="cart-counter" class="counter-badge d-none"></span>
+                    </a>
+                </li>
+
+                <li id="nav-user" class="nav-item d-none">
+                    <a class="nav-link active">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-icon lucide-user"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span id="user-name"></span>
+                    </a>
+                </li>
+
+                <li id="nav-signin" class="nav-item d-flex">
+                    <a class="nav-link active" href="Pages/Html/signin.html">
+                        <svg
+                                class="me-2"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="lucide lucide-log-in-icon lucide-log-in"
+                        >
+                            <path d="m10 17 5-5-5-5" />
+                            <path d="M15 12H3" />
+                            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
+                        </svg>
+                        Sign In</a
+                    >
+                </li>
+                <li id="nav-signup" class="nav-item">
+                    <a class="nav-link active" href="Pages/Html/signup.html">Sign Up</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main>
+    <section class="hero vh-90">
+        <div class="hero-content text-white d-flex flex-column h-100 justify-content-center">
+            <div class="container d-flex align-items-center mb-auto">
+                <div class="left-side">
+                    <h1 class="mb-4">Build Your Ultimate PC</h1>
+                    <p class="mb-5">
+                        Discover the latest PC components and build your dream computer
+                        with our expert guidance and top-quality parts.
+                    </p>
+                    <a
+                            class="shop bg-body rounded-4 me-2 p-3 text-decoration-none text-black"
+                            href="Pages/Html/products.html"
+                    >Shop Components</a
+                    >
+                    <a
+                            class="build border rounded-4 p-3 text-decoration-none text-white"
+                            href="Pages/Html/custom.html"
+                    >Build Custom PC</a
+                    >
+                </div>
+                <div class="img p-4">
+                    <img src="./assets/images/hero.png" />
+                </div>
+                <div class="right-side pt-5">
+                    <h2>Pre-Built</h2>
+                    <p>
+                        Computers that are already assembled and configured by
+                        manufacturers,rather than building one’s own computer from
+                        scratch.
+                    </p>
+                    <h2 class="mt-4">Build it yourself</h2>
+
+                    <p>
+                        Main advantages of building your own computer is flexibility and
+                        customization. You have full control over the selection of each
+                        component, allowing you to choose the best parts for your
+                        specific needs and budget.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="whypc py-5">
+        <div class="container text-center">
+            <h2 class="top1 mb-3 pt-4">Why Choose PC Builder?</h2>
+            <p class="top2 mb-5 pb-4">
+                We provide everything you need to build the perfect computer, from
+                individual components to complete custom builds.
+            </p>
+            <div class="d-flex text-center flex-wrap gap-4 justify-content-evenly">
+                <div class="why rounded-4 d-flex flex-column gap-4 col-xxl-3 col-lg-4 col-md-6 col-sm-12">
+                    <div class="logo">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="50"
+                                height="50"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="lucide lucide-computer-icon lucide-computer"
+                        >
+                            <rect width="14" height="8" x="5" y="2" rx="2" />
+                            <rect width="20" height="8" x="2" y="14" rx="2" />
+                            <path d="M6 18h2" />
+                            <path d="M12 18h6" />
+                        </svg>
+                    </div>
+                    <div class="details">
+                        <h2>Custom PC Builder</h2>
+                        <p>
+                            Build your dream PC with our interactive configurator. Choose
+                            from thousands of compatible components.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="why rounded-4 d-flex flex-column gap-4 col-xxl-3 col-lg-4 col-md-6 col-sm-12">
+                    <div class="logo">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="50"
+                                height="50"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="lucide lucide-shield-icon lucide-shield"
+                        >
+                            <path
+                                    d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+                            />
+                        </svg>
+                    </div>
+                    <div class="details">
+                        <h2>Quality Guarantee</h2>
+                        <p>
+                            All our products come with manufacturer warranty and our
+                            quality assurance guarantee.
+                        </p>
+                    </div>
+                </div>
+                <div class="why rounded-4 d-flex flex-column gap-4 col-xxl-3 col-lg-4 col-md-6 col-sm-12">
+                    <div class="logo">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="50"
+                                height="50"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="lucide lucide-truck-icon lucide-truck"
+                        >
+                            <path
+                                    d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"
+                            />
+                            <path d="M15 18H9" />
+                            <path
+                                    d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"
+                            />
+                            <circle cx="17" cy="18" r="2" />
+                            <circle cx="7" cy="18" r="2" />
+                        </svg>
+                    </div>
+                    <div class="details">
+                        <h2>Fast Shipping</h2>
+                        <p>
+                            Free shipping on orders over $100. Express delivery available
+                            for urgent builds.
+                        </p>
+                    </div>
+                </div>
+                <div class="why rounded-4 d-flex flex-column gap-4 col-xxl-3 col-lg-4 col-md-6 col-sm-12">
+                    <div class="logo">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="50"
+                                height="50"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="lucide lucide-computer-icon lucide-computer"
+                        >
+                            <rect width="14" height="8" x="5" y="2" rx="2" />
+                            <rect width="20" height="8" x="2" y="14" rx="2" />
+                            <path d="M6 18h2" />
+                            <path d="M12 18h6" />
+                        </svg>
+                    </div>
+                    <div class="details">
+                        <h2>Expert Support</h2>
+                        <p>
+                            Our team of PC building experts is here to help you make the
+                            right choices for your needs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="categories py-5">
+        <h2 class="top1 text-center mb-3">Browse Categories</h2>
+        <p class="top2 text-center mb-5">
+            Find the perfect components for your build
+        </p>
+        <div class="container">
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <div class="category-card">
+                        <a href="Pages/Html/products.html"
+                        ><img src="./assets/images/intelcpu.webp" alt="Processors"
+                        /></a>
+                        <h3>Processors</h3>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="category-card">
+                        <a href="Pages/Html/products.html"
+                        ><img src="./assets/images/card.webp" alt="cards"
+                        /></a>
+                        <h3>Graphic Cards</h3>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="category-card">
+                        <a href="Pages/Html/products.html"
+                        ><img src="./assets/images/memory.webp" alt="memory"
+                        /></a>
+                        <h3>Memory & Storage</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-2 g-3">
+                <div class="col-md-4">
+                    <div class="category-card">
+                        <a href="Pages/Html/products.html"
+                        ><img
+                                src="./assets/images/motherboard.webp"
+                                alt="motherboard"
+                        /></a>
+                        <h3>Motherboards</h3>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="category-card">
+                        <a href="Pages/Html/products.html"
+                        ><img src="./assets/images/power.webp" alt="powersupplies"
+                        /></a>
+                        <h3>Power Supplies</h3>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="category-card">
+                        <a href="Pages/Html/products.html"
+                        ><img src="./assets/images/case.webp" alt="cases"
+                        /></a>
+                        <h3>Cases</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"
+></script>
+
+<script src="./Pages/Js/navbar.js"></script>
+<script src="./Pages/Js/signup.js"></script>
+<script src="./Pages/Js/signin.js"></script>
+<script src="./pages/Js/products.js"></script>
+</body>
+</html>

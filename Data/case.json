@@ -1,0 +1,8 @@
+[
+  {
+    "product_id": 8,
+    "form_factor": "ATX",
+    "gpu_max_length_mm": 381,
+    "cooling_support": "Front 2x120mm, Top 2x120mm, Rear 1x120mm"
+  }
+]

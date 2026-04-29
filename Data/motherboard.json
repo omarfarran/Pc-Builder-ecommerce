@@ -1,0 +1,10 @@
+[
+  {
+    "product_id": 4,
+    "socket": "AM4",
+    "chipset": "B550",
+    "form_factor": "ATX",
+    "max_ram": 128,
+    "ram_type": "DDR4"
+  }
+]

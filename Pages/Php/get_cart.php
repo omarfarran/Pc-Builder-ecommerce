@@ -1,0 +1,35 @@
+<?php
+session_start();
+
+$host = "localhost";
+$dbname = "admins";
+$user = "root";
+$pass = "";
+
+try {
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $pass, [
+        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
+    ]);
+} catch (PDOException $e) {
+    die(json_encode(["status" => "error", "message" => "Connection failed"]));
+}
+header('Content-Type: application/json');
+
+if (!isset($_SESSION['user_id'])) {
+    echo json_encode([]);
+    exit;
+}
+
+$user_id = $_SESSION['user_id'];
+
+$sql = "SELECT p.*, c.qty, c.id as cart_item_id 
+        FROM cart_items c 
+        JOIN products p ON c.product_id = p.id 
+        WHERE c.user_id = ?";
+$stmt = $pdo->prepare($sql);
+$stmt->execute([$user_id]);
+$items = $stmt->fetchAll();
+
+echo json_encode($items);
+?>

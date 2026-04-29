@@ -1,0 +1,54 @@
+body{
+
+background-color: #121212;
+
+}
+.navbar .navbar-brand{
+
+font-weight: bolder;
+
+
+}
+
+.navbar{
+
+    background-color: #1B1B1B;
+
+}
+.navbar .nav-item:hover {
+background-color: #232323;
+border:none ;
+outline: none;
+border-radius:7px;
+
+}
+
+.bg-dark{
+    background-color: #1B1B1B !important;
+
+}
+
+.border-dark{
+    border-color:#333333 !important;
+}
+p{
+    
+color:    #A1A1A1;
+ 
+}
+svg{ 
+    color: white;
+}
+
+.sign-in input::placeholder {
+  color: #A1A1A1; 
+  font-size: small;
+}
+
+.sign-info{
+
+width:400px;
+
+
+
+}

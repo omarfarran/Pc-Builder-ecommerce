@@ -1,0 +1,10 @@
+[
+  {
+    "product_id": 3,
+    "vram": 8,
+    "core_clock": 1830,
+    "boost_clock": 2460,
+    "memory_bus": 128,
+    "tdp": 115
+  }
+]

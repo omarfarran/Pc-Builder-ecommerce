@@ -1,0 +1,10 @@
+[
+  {
+    "product_id": 5,
+    "size_gb": 16,
+    "modules": 2,
+    "speed_mhz": 3200,
+    "type": "DDR4",
+    "cas_latency": 16
+  }
+]

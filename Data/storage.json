@@ -1,0 +1,9 @@
+[
+  {
+    "product_id": 6,
+    "type": "SSD NVMe",
+    "capacity_gb": 1000,
+    "read_speed": 3500,
+    "write_speed": 3300
+  }
+]

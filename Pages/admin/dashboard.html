@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PC Builder Admin</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../Css/admin/admin.css">
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="admin-wrapper">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h4 class="logo">PC Builder Admin</h4>
+
+<ul class="menu">
+  <li class="active">
+    <a href="../admin/dashboard.html"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layout-dashboard-icon lucide-layout-dashboard"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg> 
+Dashboard</a>
+  </li >
+  <li >
+    <a href="../admin/orders.html"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-notebook-pen-icon lucide-notebook-pen"><path d="M13.4 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7.4"/><path d="M2 6h4"/><path d="M2 10h4"/><path d="M2 14h4"/><path d="M2 18h4"/><path d="M21.378 5.626a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z"/></svg> Orders</a>
+  </li>
+  
+      <li ><a href="../admin/products.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-package-search-icon lucide-package-search"><path d="M21 10V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l2-1.14"/><path d="m7.5 4.27 9 5.15"/><polyline points="3.29 7 12 12 20.71 7"/><line x1="12" x2="12" y1="22" y2="12"/><circle cx="18.5" cy="15.5" r="2.5"/><path d="M20.27 17.27 22 19"/></svg>Products</a></li>
+ 
+ 
+</ul>
+
+    <div class="admin-footer">
+      <p id="admin-name">Admin</p>
+      <button class="btn btn-danger btn-sm" onclick="logout()">Sign Out</button>
+    </div>
+  </aside>
+
+  <!-- Main -->
+  <main class="main">
+
+    <h2 class="mb-4">Dashboard</h2>
+
+    <!-- Stats -->
+    <div class="row g-4 mb-4">
+      <div class="col-md-3">
+        <div class="stat-card">
+          <h6>Total Revenue</h6>
+          <h3 id="total-revenue">$0</h3>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="stat-card">
+          <h6>Total Orders</h6>
+          <h3 id="total-orders">0</h3>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="stat-card">
+          <h6>Products</h6>
+          <h3 id="total-products">0</h3>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="stat-card">
+          <h6>Active Users</h6>
+          <h3 id="active-users">0</h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- Charts -->
+    <div class="row g-4 mb-4">
+      <div class="col-md-8">
+        <div class="card-dark">
+          <h5>Revenue & Orders</h5>
+          <canvas id="revenueChart"></canvas>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card-dark">
+          <h5>Sales by Category</h5>
+          <canvas id="categoryChart"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recent Orders -->
+    <div class="card-dark">
+      <h5>Recent Orders</h5>
+      <div id="recent-orders"></div>
+    </div>
+
+  </main>
+</div>
+<script src="../Js/admin/ordersService.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="../Js/admin/dashboard.js"></script>
+</body>
+</html>

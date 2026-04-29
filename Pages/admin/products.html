@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Products Management</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../Css/admin/admin.css">
+    <link rel="stylesheet" href="../Css/main.css">
+</head>
+<body>
+
+<div class="admin-wrapper">
+
+    <aside class="sidebar">
+        <h4 class="logo">PC Builder Admin</h4>
+        <ul class="menu">
+            <li><a href="../admin/dashboard.html"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg> Dashboard</a></li>
+            <li><a href="../admin/orders.html"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13.4 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7.4"/><path d="M2 6h4"/><path d="M2 10h4"/><path d="M2 14h4"/><path d="M2 18h4"/><path d="M21.378 5.626a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z"/></svg> Orders</a></li>
+            <li class="active"><a href="../admin/products.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l2-1.14"/><path d="m7.5 4.27 9 5.15"/><polyline points="3.29 7 12 12 20.71 7"/><line x1="12" x2="12" y1="22" y2="12"/><circle cx="18.5" cy="15.5" r="2.5"/><path d="M20.27 17.27 22 19"/></svg> Products</a></li>
+        </ul>
+
+        <div class="admin-footer">
+            <p id="admin-name">Admin</p>
+            <button class="btn btn-danger btn-sm" onclick="logout()">Sign Out</button>
+        </div>
+    </aside>
+
+    <main class="main">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <div class="row w-75">
+                <h2>Products Management</h2>
+                <div class="stat-card mt-4 w-25">
+                    <h6>Total Products</h6>
+                    <h3 id="totalProducts">0</h3>
+                </div>
+
+                <div class="card-dark mt-4 mb-4 w-100 d-flex align-items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-2 text-secondary"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+                    <input
+                            type="text"
+                            id="searchInput"
+                            class="form-control bg-dark text-black border-0 shadow-none ffff"
+                            placeholder="Search products by name, brand or category..."
+                            oninput="filterProducts()"
+                    />
+                </div>
+            </div>
+            <button id="addProductBtn" class="btn btn-light" onclick="openAddModal()">
+                + Add Product
+            </button>
+        </div>
+
+        <div class="card-dark p-0">
+            <table class="table table-dark table-borderless table-hover mb-0">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Brand</th>
+                    <th>Price</th>
+                    <th>Stock</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody id="products-body">
+                </tbody>
+            </table>
+        </div>
+    </main>
+</div>
+
+<div id="addModal" class="modal-overlay d-none">
+    <div class="modal-card">
+        <div class="modal-header">
+            <div>
+                <h4>Add New Product</h4>
+                <p>Add a new product to your catalog</p>
+            </div>
+            <button onclick="closeAddModal()" class="close-btn">×</button>
+        </div>
+
+        <div class="modal-form">
+            <div>
+                <label>Product Name</label>
+                <input id="add-name" placeholder="Product name">
+            </div>
+            <div>
+                <label>Brand</label>
+                <input id="add-brand" placeholder="Brand">
+            </div>
+            <div>
+                <label>Category</label>
+                <select id="add-type">
+                    <option value="">Select category</option>
+                    <option value="GPU">GPU</option>
+                    <option value="CPU">CPU</option>
+                    <option value="RAM">RAM</option>
+                    <option value="Case">Case</option>
+                    <option value="Motherboard">Motherboard</option>
+                </select>
+            </div>
+            <div>
+                <label>Price ($)</label>
+                <input id="add-price" type="number" step="0.01" value="0">
+            </div>
+            <div>
+                <label>Stock Quantity</label>
+                <input id="add-stock" type="number" value="0">
+            </div>
+            <div>
+                <label>Image URL</label>
+                <input id="add-image" placeholder="https://example.com/image.jpg">
+            </div>
+            <div class="full">
+                <label>Description</label>
+                <textarea id="add-description" rows="3"></textarea>
+            </div>
+        </div>
+
+        <div class="modal-footer">
+            <button class="btn-dark" onclick="addProduct()">Add Product</button>
+            <button class="btn-light" onclick="closeAddModal()">Cancel</button>
+        </div>
+    </div>
+</div>
+
+<div id="editModal" class="modal-overlay d-none">
+    <div class="modal-card">
+        <div class="modal-header">
+            <div>
+                <h4>Edit Product</h4>
+                <p>Update product information</p>
+            </div>
+            <button onclick="closeEditModal()" class="close-btn">×</button>
+        </div>
+
+        <div class="modal-form">
+            <div>
+                <label>Product Name</label>
+                <input id="edit-name">
+            </div>
+            <div>
+                <label>Brand</label>
+                <input id="edit-brand">
+            </div>
+            <div>
+                <label>Category</label>
+                <select id="edit-type">
+                    <option value="GPU">GPU</option>
+                    <option value="CPU">CPU</option>
+                    <option value="RAM">RAM</option>
+                    <option value="Case">Case</option>
+                    <option value="Motherboard">Motherboard</option>
+                </select>
+            </div>
+            <div>
+                <label>Price ($)</label>
+                <input id="edit-price" type="number" step="0.01">
+            </div>
+            <div>
+                <label>Stock Quantity</label>
+                <input id="edit-stock" type="number">
+            </div>
+            <div>
+                <label>Image URL</label>
+                <input id="edit-image">
+            </div>
+            <div class="full">
+                <label>Description</label>
+                <textarea id="edit-description" rows="3"></textarea>
+            </div>
+        </div>
+
+        <div class="modal-footer">
+            <button class="btn-dark" onclick="updateProduct()">Update Product</button>
+            <button class="btn-light" onclick="closeEditModal()">Cancel</button>
+        </div>
+    </div>
+</div>
+
+<script src="../Js/admin/products.js"></script>
+</body>
+</html>

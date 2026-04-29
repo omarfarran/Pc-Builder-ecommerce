@@ -1,0 +1,251 @@
+[
+  {
+    "id": 1,
+    "name": "AMD RX 7800 XT",
+    "type": "GPU",
+    "brand": "AMD",
+    "price": 433,
+    "stock": 20,
+    "description": "Excellent price-performance GPU for 1440p gaming",
+    "image": "../../assets/images/productsimgs/amd7080.webp"
+  },
+  {
+    "id": 2,
+    "name": "AMD RX 7900 XTX",
+    "type": "GPU",
+    "brand": "AMD",
+    "price": 289,
+    "stock": 30,
+    "description": "Flagship RDNA 3 graphics card with 24GB VRAM",
+    "image": "../../assets/images/productsimgs/AMD7900.webp"
+  },
+ 
+
+  {
+    "id": 3,
+    "name": "NVIDIA RTX 4070",
+    "type": "GPU",
+    "brand": "NVIDIA",
+    "price": 300,
+    "stock": 35,
+    "description": "Great 1440p gaming with RTX features",
+    "image": "../../assets/images/productsimgs/tx.webp"
+  },
+  {
+    "id": 4,
+    "name": "NVIDIA RTX 4090",
+    "type": "GPU",
+    "brand": "NVIDIA",
+    "price": 1599,
+    "stock": 6,
+    "description": "Ultimate 4K gaming performance with RT and DLSS 3",
+    "image": "../../assets/images/productsimgs/rtx4090.webp"
+  },
+  {
+    "id": 5,
+    "name": "Corsair 4000D Airflow",
+    "type": "Case",
+    "brand": "Corsair",
+    "price": 120,
+    "stock": 10,
+    "description": "High-airflow mid-tower with tempered glass",
+    "image": "../../assets/images/productsimgs/case1.webp"
+  },
+  {
+    "id": 6,
+    "name": "Fractal Design Define 7",
+    "type": "Case",
+    "brand": "Fractal",
+    "price": 170,
+    "stock": 16,
+    "description": "Silent mid-tower case with excellent airflow",
+    "image": "../../assets/images/productsimgs/case2.webp"
+  },
+  {
+    "id": 7,
+    "name": "NZXT H7 Flow",
+    "type": "Case",
+    "brand": "NZXT",
+    "price": 150,
+    "stock": 7,
+    "description": "Ultra airflow case with minimalist design",
+    "image": "../../assets/images/productsimgs/case3.webp"
+  },
+  {
+    "id": 8,
+    "name": "DeepCool MATREXX 55",
+    "type": "Case",
+    "brand": "DeepCool",
+    "price": 95,
+    "stock": 12,
+    "description": "Modern tower case with tempered glass side panel",
+    "image": "../../assets/images/productsimgs/case5.webp"
+  },
+
+  {
+    "id": 100,
+    "name": "Intel Core i9-13900K",
+    "type": "CPU",
+    "brand": "Intel",
+    "price": 599,
+    "stock": 10,
+    "description": "High-end 24-core CPU for gaming and productivity",
+    "image": "../../assets/images/inteli9.webp"
+  },
+  {
+    "id": 101,
+    "name": "Intel Core i7-13700K",
+    "type": "CPU",
+    "brand": "Intel",
+    "price": 549,
+    "stock": 15,
+    "description": "Excellent performance CPU for gaming and multitasking",
+    "image": "../../assets/images/Intel Core i7.webp"
+  },
+  {
+    "id": 102,
+    "name": "AMD Ryzen 9 7900X",
+    "type": "CPU",
+    "brand": "AMD",
+    "price": 399,
+    "stock": 12,
+    "description": "Powerful Ryzen CPU with 12 cores",
+    "image": "../../assets/images/AMD7.webp"
+  },
+ {"id": 103, "name": "Intel Core i5-13600K", "type":"CPU", "price": 419, "brand": "Intel", "image": "../../assets/images/i5.webp"}
+ ,
+     { "name": "AMD Ryzen 7 7700X","type":"CPU", "price": 300, "brand": "AMD", "image": "../../assets/images/AMD7.webp" }
+,
+  {
+    "id": 120,
+    "name": "Gigabyte Z790 AORUS Elite AX",
+    "type": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 299,
+    "stock": 10,
+    "description": "Intel Z790 motherboard with WiFi 6E",
+    "image": "../../assets/images/mbb.webp"
+  },
+  {
+    "id": 121,
+    "name": "MSI MPG B650 Tomahawk WiFi",
+    "type": "Motherboard",
+    "brand": "MSI",
+    "price": 239,
+    "stock": 14,
+    "description": "Reliable AM5 motherboard for Ryzen CPUs",
+    "image": "../../assets/images/mbb.webp"
+  },
+
+  {
+    "id": 130,
+    "name": "Corsair Vengeance 32GB DDR5 6000MHz",
+    "type": "RAM",
+    "brand": "Corsair",
+    "price": 109,
+    "stock": 20,
+    "description": "Fast DDR5 RAM kit for gaming PCs",
+    "image": "../../assets/images/R.webp"
+  },
+  {
+    "id": 131,
+    "name": "G.SKILL Trident Z5 RGB 32GB DDR5",
+    "type": "RAM",
+    "brand": "G.Skill",
+    "price": 149,
+    "stock": 12,
+    "description": "Premium RGB DDR5 memory",
+    "image": "../../assets/images/R.webp"
+  }
+
+
+
+
+
+  ,
+{
+  "id": 20,
+  "name": "Corsair RM850x 850W 80+ Gold",
+  "type": "PSU",
+  "brand": "Corsair",
+  "price": 139,
+  "stock": 18,
+  "description": "Fully modular PSU with silent fan and high efficiency",
+  "image": "../../assets/images/psu.webp"
+},
+{
+  "id": 21,
+  "name": "EVGA SuperNOVA 750 G5",
+  "type": "PSU",
+  "brand": "EVGA",
+  "price": 129,
+  "stock": 12,
+  "description": "High quality modular PSU with Japanese capacitors",
+  "image": "../../assets/images/psu.webp"
+},
+{
+  "id": 22,
+  "name": "Cooler Master MWE Gold 650W",
+  "type": "PSU",
+  "brand": "Cooler Master",
+  "price": 99,
+  "stock": 20,
+  "description": "Reliable PSU with Gold efficiency for gaming builds",
+  "image": "../../assets/images/power.webp"
+}
+
+,
+{
+  "id": 9,
+  "name": "Samsung 980 PRO 1TB NVMe SSD",
+  "type": "Storage",
+  "brand": "Samsung",
+  "price": 120,
+  "stock": 25,
+  "description": "High-performance PCIe 4.0 NVMe SSD for gaming and productivity",
+  "image": "../../assets/images/sa.webp"
+},
+{
+  "id": 10,
+  "name": "WD Black SN850X 2TB NVMe SSD",
+  "type": "Storage",
+  "brand": "Western Digital",
+  "price": 190,
+  "stock": 18,
+  "description": "Ultra-fast NVMe SSD optimized for gaming",
+  "image": "../../assets/images/ss.webp"
+},
+{
+  "id": 11,
+  "name": "Crucial P3 Plus 1TB NVMe SSD",
+  "type": "Storage",
+  "brand": "Crucial",
+  "price": 85,
+  "stock": 30,
+  "description": "Affordable NVMe SSD with solid performance",
+  "image": "../../assets/images/ss.webp"
+},
+{
+  "id": 12,
+  "name": "Samsung 870 EVO 1TB SATA SSD",
+  "type": "Storage",
+  "brand": "Samsung",
+  "price": 95,
+  "stock": 22,
+  "description": "Reliable SATA SSD with excellent endurance",
+  "image": "../../assets/images/sa.webp"
+},
+{
+  "id": 13,
+  "name": "Seagate Barracuda 2TB HDD",
+  "type": "Storage",
+  "brand": "Seagate",
+  "price": 60,
+  "stock": 40,
+  "description": "High-capacity HDD for mass storage",
+  "image": "../../assets/images/hdd.webp"
+}
+
+
+  
+]

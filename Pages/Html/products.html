@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products</title>
+
+    <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="../Css/products.css">
+    <link rel="stylesheet" href="../Css/favorits.css"/>
+    <link rel="stylesheet" href="../Css/main.css"/>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark position-sticky top-0">
+    <div class="container">
+        <a class="navbar-brand " href="../../index.html">
+            <svg
+                    class="mb-1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-computer-icon lucide-computer"
+            >
+                <rect width="14" height="8" x="5" y="2" rx="2" />
+                <rect width="20" height="8" x="2" y="14" rx="2" />
+                <path d="M6 18h2" />
+                <path d="M12 18h6" />
+            </svg>
+            Pc Builder</a
+        >
+        <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto gap-5">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../../index.html">Home</a>
+                </li>
+                <li class="nav-item d-flex">
+                    <a class="nav-link active" href="../Html/products.html">
+                        <svg
+                                class="me-2"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="lucide lucide-package-icon lucide-package"
+                        >
+                            <path
+                                    d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"
+                            />
+                            <path d="M12 22V12" />
+                            <polyline points="3.29 7 12 12 20.71 7" />
+                            <path d="m7.5 4.27 9 5.15" />
+                        </svg>
+                        Products</a
+                    >
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-disabled="true" href="../Html/custom.html"
+                    ><svg
+                            class="me-2 mb-1"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="lucide lucide-computer-icon lucide-computer"
+                    >
+                        <rect width="14" height="8" x="5" y="2" rx="2" />
+                        <rect width="20" height="8" x="2" y="14" rx="2" />
+                        <path d="M6 18h2" />
+                        <path d="M12 18h6" />
+                    </svg>
+                        Custom PC</a
+                    >
+                </li>
+            </ul>
+
+            <ul class="navbar-nav ms-auto gap-4">
+                <li class="nav-item d-flex">
+                    <a class="nav-link active" aria-current="page" href="../Html/favorites.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-icon lucide-heart"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/></svg>
+                        <span id="fav-counter" class="fav-counter d-none me-5">0</span>
+                    </a>
+                </li>
+                <li class="nav-item d-flex">
+                    <a class="nav-link active" aria-current="page" href="../Html/cart.html"
+                    ><svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="lucide lucide-shopping-cart-icon lucide-shopping-cart"
+                    >
+                        <circle cx="8" cy="21" r="1" />
+                        <circle cx="19" cy="21" r="1" />
+                        <path
+                                d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"
+                        />
+                    </svg>
+
+                    </a>
+                </li>
+
+                <li id="nav-user" class="nav-item d-none">
+                    <a class="nav-link active" href="../Html/profile.html">
+
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             width="24" height="24"
+                             viewBox="0 0 24 24"
+                             fill="none"
+                             stroke="currentColor"
+                             stroke-width="2"
+                             stroke-linecap="round"
+                             stroke-linejoin="round">
+                            <path d="M19 21v-2a4 4 0 0 0-4-4H9
+                 a4 4 0 0 0-4 4v2"/>
+                            <circle cx="12" cy="7" r="4"/>
+                        </svg>
+
+                        <span id="user-name"></span>
+
+                    </a>
+                </li>
+
+
+                <li id="nav-logout" class="nav-item d-none">
+                    <a class="nav-link active" href="#" id="logout-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                             viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m16 17 5-5-5-5"/>
+                            <path d="M21 12H9"/>
+                            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+                        </svg>
+                    </a>
+                </li>
+
+                <li id="nav-signin" class="nav-item d-flex">
+                    <a class="nav-link active" aria-disabled="true" href="../Html/signin.html"
+                    ><svg
+                            class="me-2"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="lucide lucide-log-in-icon lucide-log-in"
+                    >
+                        <path d="m10 17 5-5-5-5" />
+                        <path d="M15 12H3" />
+                        <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
+                    </svg>
+                        Sign In</a
+                    >
+                </li>
+                <li id="nav-signup" class="nav-item">
+                    <a class="nav-link active" href="../Html/signup.html">Sign Up</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<main>
+
+    <section class="products py-5">
+        <div class="container">
+
+            <h1 class="text-white">PC Components</h1>
+            <p class="text-white">Browse our extensive collection of high-quality PC parts</p>
+
+            <div class="search rounded-2">
+                <div class="row py-4 mb-5 rounded-2">
+
+                    <div class="col-md-6 ms-3">
+                        <div class="input-group mb-2">
+                            <input
+                                    id="search-input"
+                                    type="text"
+                                    class="form-control  bg-dark text-white"
+                                    placeholder="Search for a product..."
+                            />
+                        </div>
+                    </div>
+
+                    <div class="col-md-1 rr">
+                        <div class="dropdown">
+                            <button id="category-btn" class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown">
+                                All categories
+                            </button>
+
+                            <ul id="category-menu" class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#" data-cat="All">All</a></li>
+                                <li><a class="dropdown-item" href="#" data-cat="GPU">GPU</a></li>
+                                <li><a class="dropdown-item" href="#" data-cat="Case">Case</a></li>
+                                <li><a class="dropdown-item" href="#" data-cat="RAM">RAM</a></li>
+                                <li><a class="dropdown-item" href="#" data-cat="PSU">PSU</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-1 rr">
+                        <div class="dropdown">
+
+                            <button id="brand-btn"
+                                    class="btn btn-dark dropdown-toggle"
+                                    data-bs-toggle="dropdown">
+                                All Brands
+                            </button>
+
+                            <ul id="brand-menu" class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#" data-brand="All">All</a></li>
+                                <li><a class="dropdown-item" href="#" data-brand="AMD">AMD</a></li>
+                                <li><a class="dropdown-item" href="#" data-brand="NVIDIA">NVIDIA</a></li>
+                                <li><a class="dropdown-item" href="#" data-brand="Corsair">Corsair</a></li>
+                                <li><a class="dropdown-item" href="#" data-brand="Fractal">Fractal</a></li>
+                                <li><a class="dropdown-item" href="#" data-brand="NZXT">NZXT</a></li>
+                                <li><a class="dropdown-item" href="#" data-brand="DeepCool">DeepCool</a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-1">
+                        <div class="dropdown d-flex g-3">
+                            <button
+                                    class="btn btn-dark dropdown-toggle"
+                                    id="sort-btn"
+                                    data-bs-toggle="dropdown">
+                                Name A-Z
+                            </button>
+
+                            <ul class="dropdown-menu" id="sort-menu">
+                                <li>
+                                    <a class="dropdown-item" data-sort="az" href="#">Name A-Z</a>
+                                </li>
+
+                                <li>
+                                    <a class="dropdown-item" data-sort="za" href="#">Name Z-A</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div id="products-grid" class="row g-3"></div>
+
+        </div>
+
+    </section>
+
+</main>
+
+<div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content bg-dark text-white border-secondary">
+
+            <div class="modal-header border-bottom border-secondary">
+                <h5 class="modal-title">Product Details</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body" id="productModalBody">
+            </div>
+
+        </div>
+    </div>
+</div>
+<script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"
+></script>
+
+<script src="../Js/products.js"></script>
+<script src="../Js/dataService.js"></script>
+<script src="../Js/navbar.js"></script>
+<script src="../Js/cart.js"></script>
+
+
+</body>
+</html>
